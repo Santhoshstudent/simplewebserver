@@ -54,6 +54,9 @@ httpd.serve_forever()
 
 
 ## OUTPUT:
+![Screenshot 2024-02-22 135304 web 1](https://github.com/Santhoshstudent/simplewebserver/assets/145446853/a622ae46-723a-40ac-a01b-f471f692c2f6)
+![Screenshot 2024-02-22 135431 web 2](https://github.com/Santhoshstudent/simplewebserver/assets/145446853/1a851280-6aeb-4a83-925f-fc0634261ea8)
+
 
 
 ## RESULT:
