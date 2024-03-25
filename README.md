@@ -22,40 +22,72 @@ Testing the webserver.
 
 ## PROGRAM:
 ```
-from http.server import HTTPServer, BaseHTTPRequestHandler
-content = """
-<!DOCTYPE html>
+from http.server import HTTPServer,BaseHTTPRequestHandler
+
+content='''
+<!doctype html>
 <html>
 <head>
-<title>My webserver</title>
+<title> My Web Server</title>
 </head>
 <body>
-<h1><u>Languages used iun Web Development</u><h1>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>Bootstrap</li>
+<table border ="2" cellspacing ="10" cellpadding = "6" align = "Center">
+<caption> TOP FIVE REVENUE GENERATING SOFTWARE COMPANIES </caption>
+<tr>
+<th> S.No </th>
+<th> Company </th>
+<th> Revenue </th>
+</tr>
+<tr>
+<td> 1. </td>
+<td> tcs </td>
+<td> 265 Billion </td>
+</tr>
+<tr>
+<td> 2. </td>
+<td> HCL </td>
+<td> 29.6 Billion </td>
+</tr>
+<tr>
+<td> 3. </td>
+<td> HP </td>
+<td> 29.1 Billion </td>
+</tr>
+<tr>
+<td> 4. </td>
+<td> RIL </td>
+<td> 456 Billion </td>
+</tr>
+<tr>
+<td> 5. </td>
+<td> OYO </td>
+<td> 5.6 Billion </td>
+</tr>
+</table>
 </body>
 </html>
-"""
-class myhandler(BaseHTTPRequestHandler):
+'''
+
+class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
-        print("request received")
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
+
+        print("Get request received...")
+        self.send_response(200) 
+        self.send_header("content-type", "text/html")       
         self.end_headers()
         self.wfile.write(content.encode())
-server_address = ('',80)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
+
+print("This is my webserver") 
+server_address =('',8000)
+httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
 ```
 
 
+
 ## OUTPUT:
-![Screenshot 2024-02-22 135304 web 1](https://github.com/Santhoshstudent/simplewebserver/assets/145446853/a622ae46-723a-40ac-a01b-f471f692c2f6)
-![Screenshot 2024-02-22 135431 web 2](https://github.com/Santhoshstudent/simplewebserver/assets/145446853/1a851280-6aeb-4a83-925f-fc0634261ea8)
+![Screenshot 2024-03-25 082724](https://github.com/Santhoshstudent/simplewebserver/assets/145446853/df097e71-565e-45be-9bf3-a46cd98b0807)
+
 
 
 
